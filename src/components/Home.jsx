@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import devProfile from '../assets/dev-profile.png';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 const Home = () => {
     const imgref = useRef(null);
     const ringref = useRef(null)
@@ -24,11 +24,6 @@ const Home = () => {
             }
         }
         );
-        gsap.fromTo(ringref.current, {
-            rotate: 360,
-        }, {
-
-        })
 
 
     }, [])
@@ -52,23 +47,22 @@ const Home = () => {
                     </Link>
 
                 </div>
-                <div className="relative top-8 ">
-                    <div
-                        ref={ringref}
-                        className="absolute inset-0  rounded-full p-1 bg-gradient-to-r from-red-900 via-yellow-400 to-blue-900 animate-spin shadow-[0_0_30px_10px_rgba(255,0,128,0.4)]"
-                    >
-                        <div className="w-full h-full bg-white  rounded-full"></div>
-                    </div>
+                <div className="relative w-[15rem] h-[15rem] md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem] top-8 shrink-0">
+  <div
+    ref={ringref}
+    className="absolute w-full h-full rounded-full p-1 bg-gradient-to-r from-red-900 via-yellow-400 to-blue-900 animate-spin shadow-[0_0_30px_10px_rgba(255,0,128,0.4)]"
+  >
+    <div className="w-full h-full bg-white rounded-full"></div>
+  </div>
 
-                    <img
-                        ref={imgref}
-                        src="/WhatsApp Image 2025-07-13 at 9.06.17 AM.png"
-                        alt="Developer Illustration"
-                        className="md:w-[26rem] md:h-[26rem] object-contain -top-[18px] rounded-full relative z-10 "
-                    />
-                </div>
-
-            </div>
+  <img
+    ref={imgref}
+    src={devProfile}
+    alt="Developer Illustration"
+    className="w-full h-full object-contain rounded-full relative -top-[15px] z-10"
+  />
+</div>
+   </div>
             <div className="mt-10 text-center animate-bounce ">
                 <span className="text-white text-xl p-2 bg-white/20 w-2 h-1 rounded-full shadow-2xl">↓</span>
             </div>
