@@ -3,10 +3,10 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <section className=" py-20 px-6">
+        <section className=" py-20 px-6 bg-[#737373]">
             <div className="max-w-3xl mx-auto text-center w-full min-h-screen">
                 <h2 className="text-4xl font-bold text-red-600 mb-6">Contact Me</h2>
-                <p className="text-gray-700 text-lg mb-8">
+                <p className="text-white text-lg mb-8">
                     Have an opportunity or just want to say hi? I’d love to connect!
                 </p>
 

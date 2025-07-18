@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import Navbar from './components/navbar'
-import Home from './components/Home'
+import Home from './components/home'
 import Skils from './components/skills'
 import About from './components/about'
 import Projects from './components/projects'
@@ -30,7 +30,7 @@ const App = () => {
   })
   return (
     <HashRouter>
-      <div ref={mainref} className='bg-white' >
+      <div ref={mainref} className='' >
         <Navbar />
         <Routes>
           < Route path='/' element={<>

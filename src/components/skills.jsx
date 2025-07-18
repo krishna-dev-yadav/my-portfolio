@@ -35,7 +35,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-[#737373]">
       <h2 className="text-4xl font-bold text-center text-red-600 mb-12">Skills</h2>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {Object.entries(skills).map(([category, items], index) => (

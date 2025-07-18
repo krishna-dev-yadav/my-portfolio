@@ -70,16 +70,16 @@ const projects = [
 const ProjectCard = React.forwardRef(({ project }, ref) => (
   <div
     ref={ref}
-    className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition w-full md:w-[45%]"
+    className="bg-gradient-to-r from-[#D9D9D9]/20 to-[#737373] border border-blue-500 rounded-[60px] shadow-xl p-6 hover:scale-105 transition w-full md:w-[45%]"
   >
-    <h3 className="text-2xl font-bold text-red-600">{project.name}</h3>
-    <p className="text-gray-700 mt-2">{project.description}</p>
-    <ul className="list-disc list-inside mt-2 text-sm text-gray-600">
+    <h3 className="text-2xl font-bold bg-gradient-to-r from-[#00F4E0] via-[#2E5451] to-[#F6E2E2] bg-clip-text text-transparent ">{project.name}</h3>
+    <p className="text-gray-400 mt-2">{project.description}</p>
+    <ul className="list-disc list-inside mt-2 text-sm text-gray-200">
       {project.features.map((feature, idx) => (
         <li key={idx}>{feature}</li>
       ))}
     </ul>
-    <div className="mt-2 text-sm text-gray-500">
+    <div className="mt-2 text-sm text-gray-400">
       <span className="font-semibold">Tech:</span> {project.tech.join(', ')}
     </div>
     <div className="mt-4 flex gap-4">
@@ -111,7 +111,7 @@ const Projects = () => {
       if (card) {
         gsap.fromTo(
           card,
-          { y:50, opacity: 0 },
+          { y: 50, opacity: 0 },
           {
             y: 0,
             opacity: 1,
@@ -130,7 +130,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-gradient-to-b from-[#000000] via-[#1C1A1A] to-[#5C5C5C] ">
       <h2
         className="text-4xl font-bold text-center text-red-600 mb-10"
       >
@@ -143,6 +143,7 @@ const Projects = () => {
             project={project}
             ref={(el) => (cardRefs.current[idx] = el)}
           />
+          
         ))}
       </div>
     </section>
